@@ -9,4 +9,5 @@ The image contains the following software preinstalled:
 - Group: "Development Tools"
 - MySQL community client + devel package
 - Python devel package
+- Boost devel package
 - CMake 3.14 + FindMySQL

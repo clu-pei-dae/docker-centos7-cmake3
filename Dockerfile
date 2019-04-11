@@ -18,7 +18,7 @@ rm -f /lib/systemd/system/anaconda.target.wants/*;
 
 # Install MySQL client libs and dev tools
 RUN rpm -Uvh ${MYSQL_REPO}}
-RUN yum -y install @'Development Tools' mysql-community-client mysql-community-devel python-devel \
+RUN yum -y install @'Development Tools' mysql-community-client mysql-community-devel python-devel boost-devel\
     && yum clean all
 
 # Install current version of CMake
@@ -30,4 +30,3 @@ RUN curl -L -o /tmp/install-cmake.sh ${CMAKE_DOWNLOAD} && chmod +x /tmp/install-
 
 # Install cmake FindMySQL
 RUN curl -L -o /share/cmake-3.14/Modules/FindMySQL.cmake ${FIND_MYSQL_URL}
-
