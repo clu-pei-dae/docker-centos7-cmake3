@@ -18,7 +18,7 @@ rm -f /lib/systemd/system/anaconda.target.wants/*;
 
 # Install MySQL client libs and dev tools
 RUN rpm -Uvh ${MYSQL_REPO}}
-RUN yum -y install @'Development Tools' mysql-community-client mysql-community-devel python-devel boost-devel\
+RUN yum -y install @'Development Tools' mysql-community-libs mysql-community-client mysql-community-devel python-devel boost-devel\
     && yum clean all
 
 # Install current version of CMake
